@@ -1,0 +1,4 @@
+flipside==2.0.8
+pandas==2.2.2
+requests==2.29.0
+python-dotenv==1.0.1
