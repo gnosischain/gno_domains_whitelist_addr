@@ -7,9 +7,11 @@ This repository houses a suite of scripts designed to compile a list of whitelis
 - **`/scripts`**: Contains all executable Python scripts.
   - `validators_at_slot.py`: Retrieves validator withdrawal credentials for a specified slot and converts them to ETH1 addresses.
   - `flipsidecrypto_query.py`: Executes SQL queries stored in `/sql_queries` to fetch addresses of GNO holders on both the Ethereum and Gnosis chains.
+  - `dune_query.py`: Executes stored queries in Dune, using YML files for itentification of query and parameters.
+  - `gip_voters.py`: Retrieves addresses that voted on GIPs from snapshot.org.
   - `merge_csvs.py`: Merges multiple CSV files into a single file, eliminating duplicate entries.
 - **`/data`**: Used to store CSV files and outputs from scripts.
-- **`/sql_queries`**: Contains SQL query files used by the `flipsidecrypto_query.py` script.
+- **`/sql_queries`**: Contains SQL query files used by the `flipsidecrypto_query.py` script as well as YML files for `dune_query.py`.
 
 ## Script Details
 
@@ -30,6 +32,24 @@ Executes pre-defined SQL queries from the /sql_queries folder. These queries are
 #### Usage:
 ```bash
 python scripts/flipsidecrypto_query.py <path_to_sql_file>
+```
+
+### `dune_query.py`
+
+Executes stored Dune queries from the /sql_queries folder. The current query looks at the owners of Gnosis Pay wallets.
+
+#### Usage:
+```bash
+python scripts/dune_query.py <path_to_yml_file>
+```
+
+### `gip_voters.py`
+
+Looks at the snapshot.org and extract the addresses that voten on GIPs, with `timestamp_cutoff = 1720980000  # 2024/07/14 18:00 UTC` 
+
+#### Usage:
+```bash
+python scripts/gip_voters.py
 ```
 
 ### `merge_csvs.py`
