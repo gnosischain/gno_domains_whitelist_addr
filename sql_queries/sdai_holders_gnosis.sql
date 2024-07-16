@@ -7,7 +7,7 @@ inflow AS (
   FROM
     gnosis.core.ez_token_transfers
   WHERE 
-    CONTRACT_ADDRESS = '0x9c58bacc331c9aa871afd802db6379a98e80cedb'
+    CONTRACT_ADDRESS = '0xaf204776c7245bf4147c2612bf6e5972ee483701'
     AND
     BLOCK_TIMESTAMP <= '2024-07-14 18:00:00.000'
   GROUP BY 1
@@ -20,7 +20,7 @@ outflow AS (
   FROM
     gnosis.core.ez_token_transfers
   WHERE 
-    CONTRACT_ADDRESS = '0x9c58bacc331c9aa871afd802db6379a98e80cedb'
+    CONTRACT_ADDRESS = '0xaf204776c7245bf4147c2612bf6e5972ee483701'
     AND
     BLOCK_TIMESTAMP <= '2024-07-14 18:00:00.000'
   GROUP BY 1

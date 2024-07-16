@@ -1,0 +1,6 @@
+name: gnosis_gp_owners_v
+query_id: 3919956
+params:
+  - timestamp: 
+    - type: date_type
+    - value: "2024-07-14 18:00:00"

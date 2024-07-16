@@ -40,7 +40,7 @@ def main():
 
     
     # Path to the parent directory's data folder
-    data_folder_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data_update')
+    data_folder_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data')
     if not os.path.exists(data_folder_path):
         os.makedirs(data_folder_path)  
 
