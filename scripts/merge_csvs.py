@@ -21,6 +21,7 @@ def main():
 
     for file in csv_files:
         df = pd.read_csv(file)
+        df['address'] = df['address'].str.lower()
         all_addresses = pd.concat([all_addresses, df], ignore_index=True)
     
     all_addresses = all_addresses.drop_duplicates().reset_index(drop=True)
